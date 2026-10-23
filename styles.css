@@ -1,0 +1,295 @@
+:root {
+  --principal: #1a7f8e;
+  --oscuro: #0f4c56;
+  --claro: #e8f4f6;
+  --acento: #f5a623;
+  --texto: #222;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--texto);
+  background: #f7f9fa;
+  line-height: 1.6;
+}
+
+/* ---------- Encabezado ---------- */
+header {
+  background: linear-gradient(135deg, var(--oscuro), var(--principal));
+  color: #fff;
+}
+
+.barra {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.barra nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 18px;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+
+.barra nav a:hover {
+  border-bottom-color: var(--acento);
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px 70px;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  margin-bottom: 24px;
+  opacity: 0.95;
+}
+
+.boton {
+  display: inline-block;
+  background: var(--acento);
+  color: #222;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.boton:hover {
+  transform: translateY(-2px);
+}
+
+/* ---------- Contenido ---------- */
+main {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+section {
+  background: #fff;
+  padding: 26px;
+  margin-bottom: 28px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+  color: var(--oscuro);
+  margin-bottom: 18px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid var(--principal);
+}
+
+/* ---------- Cursos (imágenes) ---------- */
+.cursos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.curso {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.curso:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+}
+
+.curso img {
+  width: 100%;
+  display: block;
+}
+
+.curso .info {
+  padding: 14px;
+}
+
+.curso h3 {
+  color: var(--oscuro);
+  margin-bottom: 4px;
+}
+
+.etiqueta {
+  display: inline-block;
+  margin-top: 8px;
+  background: var(--claro);
+  color: var(--oscuro);
+  padding: 3px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+/* ---------- Tabla ---------- */
+.tabla-contenedor {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 650px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+thead th {
+  background: var(--principal);
+  color: #fff;
+}
+
+tbody tr:nth-child(even) {
+  background: var(--claro);
+}
+
+tbody tr:hover {
+  background: #cfe8ec;
+}
+
+.cupo {
+  padding: 3px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.cupo.disponible {
+  background: #d4f1dc;
+  color: #1b6b34;
+}
+
+.cupo.pocos {
+  background: #fff0cc;
+  color: #8a5a00;
+}
+
+.cupo.lleno {
+  background: #f9d6d6;
+  color: #a02525;
+}
+
+/* ---------- Enlaces ---------- */
+.enlaces {
+  list-style: none;
+}
+
+.enlaces li {
+  margin-bottom: 10px;
+}
+
+.enlaces a {
+  color: var(--principal);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.enlaces a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Formulario ---------- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 520px;
+}
+
+label {
+  font-weight: bold;
+  color: var(--oscuro);
+}
+
+input, select {
+  padding: 10px;
+  border: 2px solid #000000;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+input:focus, select:focus {
+  outline: 3px solid var(--principal);
+  border-color: var(--principal);
+  box-shadow: 0 0 0 3px rgba(26, 127, 142, 0.2);
+}
+
+button {
+  align-self: flex-start;
+  margin-top: 6px;
+  background: var(--principal);
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--oscuro);
+}
+
+/* ---------- Pie ---------- */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--oscuro);
+  color: #fff;
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .barra nav a {
+    margin: 0 10px 0 0;
+  }
+}

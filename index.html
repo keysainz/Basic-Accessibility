@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgendaCursos | Agenda tus cursos en línea</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="barra">
+      <a class="logo" href="#inicio"> AgendaCursos</a>
+      <nav>
+        <a href="#cursos">Cursos</a>
+        <a href="#horarios">Horarios</a>
+        <a href="#recursos">Recursos</a>
+        <a href="#inscripcion">Inscríbete</a>
+      </nav>
+    </div>
+
+    <div class="hero" id="inicio">
+      <h1>Agenda tus cursos en línea</h1>
+      <p>Aprende a tu ritmo, elige tu horario y reserva tu lugar en minutos.</p>
+      <a class="boton" role="button" tabindex="0" href="#inscripcion" aria-label="Reservar mi lugar">Reservar mi lugar</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- IMÁGENES -->
+    <section id="cursos">
+      <h2>Cursos disponibles</h2>
+      <div class="cursos">
+        <article class="curso">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmQO7DAg5E1esNrlkX8wwM4ZlTKJG6_sYUlhh1ewdJEA&s=10" alt="">
+          <div class="info">
+            <h3>Programación Web</h3>
+            <p>HTML, CSS y JavaScript desde cero.</p>
+            <span class="etiqueta">8 semanas</span>
+          </div>
+        </article>
+        <article class="curso">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp-gq--Jvqf5dbgf5fgKp3_B3ChjuxKeExlONMbYeZjFDvrMD5w6ag7diH&s=10" alt="Áreas de especialización en el diseño gráfico">
+          <div class="info">
+            <h3>Diseño Gráfico</h3>
+            <p>Crea identidades visuales profesionales.</p>
+            <span class="etiqueta">6 semanas</span>
+          </div>
+        </article>
+        <article class="curso">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8j2hwntSJa5g6tWkDV48fhFTwFLBAGXkET6KxYGyIdlcqCJZJ7wA_YKrc&s=10" alt="">
+          <div class="info">
+            <h3>Marketing Digital</h3>
+            <p>Redes sociales, anuncios y analítica.</p>
+            <span class="etiqueta">5 semanas</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- TABLA -->
+    <section id="horarios">
+      <h2>Horarios de cursos</h2>
+      <div class="tabla-contenedor">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Curso</th>
+              <th scope="col">Instructor</th>
+              <th scope="col">Día</th>
+              <th scope="col">Horario</th>
+              <th scope="col">Inicio</th>
+              <th scope="col">Cupo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Programación Web</td>
+              <td>Ing. Laura Méndez</td>
+              <td>Lunes y miércoles</td>
+              <td>18:00 - 20:00</td>
+              <td>2 nov 2026</td>
+              <td><span class="cupo disponible">Disponible</span></td>
+            </tr>
+            <tr>
+              <td>Diseño Gráfico</td>
+              <td>Lic. Daniel Ortiz</td>
+              <td>Martes y jueves</td>
+              <td>17:00 - 19:00</td>
+              <td>3 nov 2026</td>
+              <td><span class="cupo pocos">Pocos lugares</span></td>
+            </tr>
+            <tr>
+              <td>Marketing Digital</td>
+              <td>Mtra. Sofía Rivas</td>
+              <td>Sábados</td>
+              <td>10:00 - 14:00</td>
+              <td>7 nov 2026</td>
+              <td><span class="cupo disponible">Disponible</span></td>
+            </tr>
+            <tr>
+              <td>Excel Avanzado</td>
+              <td>Ing. Marco Duarte</td>
+              <td>Viernes</td>
+              <td>16:00 - 20:00</td>
+              <td>6 nov 2026</td>
+              <td><span class="cupo lleno">Lleno</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- LINKS -->
+    <section id="recursos">
+      <h2>Recursos y enlaces útiles</h2>
+      <ul class="enlaces">
+        <li><a href="https://meet.google.com" target="_blank" rel="noopener">Entrar a la clase en vivo (Google Meet)</a></li>
+        <li><a href="https://zoom.us" target="_blank" rel="noopener">Descargar Zoom</a></li>
+        <li><a href="https://calendar.google.com" target="_blank" rel="noopener">Agregar los horarios a mi calendario</a></li>
+        <li><a href="#inscripcion">Ir al formulario de inscripción</a></li>
+      </ul>
+    </section>
+
+    <!-- FORMULARIO -->
+    <section id="inscripcion">
+      <h2>Reserva tu lugar</h2>
+      <form action="#" method="post">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" required>
+
+        <label for="curso">Curso</label>
+        <select id="curso" name="curso" required>
+          <option value="">Selecciona un curso</option>
+          <option>Programación Web</option>
+          <option>Diseño Gráfico</option>
+          <option>Marketing Digital</option>
+        </select>
+
+        <label for="fecha">Fecha de inicio preferida</label>
+        <input type="date" id="fecha" name="fecha" required>
+
+        <button type="submit" aria-label="Agendar curso">Agendar curso</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 AgendaCursos · Aprende en línea, a tu ritmo.</p>
+  </footer>
+
+</body>
+</html>
